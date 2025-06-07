@@ -1,6 +1,6 @@
 import pandas as pd
 from datetime import datetime
-from nogit_sql_db_config import engine, Session
+from sql_db_config import engine, Session
 from weather_models import Base, Weather, WindDirection
 
 # Створює таблицю, якщо її нема

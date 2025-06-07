@@ -1,4 +1,4 @@
-##В роботі було використано:<br>
+## В роботі було використано:<br>
 * Мова: Python <br>
 * БД: Postgres, MySQL <br>
 * Migration Tool: Alembic <br>

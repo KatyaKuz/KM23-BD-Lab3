@@ -2,6 +2,7 @@ from sqlalchemy.orm import declarative_base, relationship
 from sqlalchemy import (Column, Integer, Float, String, Date, Time, Enum, ForeignKey )
 import enum
 from sqlalchemy import Boolean
+from sqlalchemy import Enum as SQLAEnum
 
 Base = declarative_base()
 
@@ -42,7 +43,12 @@ class Wind(Base):
     wind_degree = Column(Integer)# ціле
     wind_kph = Column(Float)# дробне
     wind_mph = Column(Float)
-    wind_direction = Column(Enum(WindDirection))# enum
+    #wind_direction = Column(Enum(WindDirection))# enum
+
+    wind_direction = Column(SQLAEnum(
+        "N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW",
+        name="winddirection"), nullable=True) # enum
+    
     wind_gust_mph = Column(Float)
     wind_gust_kph = Column(Float)
 

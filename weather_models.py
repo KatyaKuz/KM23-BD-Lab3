@@ -1,6 +1,7 @@
 from sqlalchemy.orm import declarative_base, relationship
 from sqlalchemy import (Column, Integer, Float, String, Date, Time, Enum, ForeignKey )
 import enum
+from sqlalchemy import Boolean
 
 Base = declarative_base()
 

@@ -26,7 +26,7 @@ def main():
     if weather.wind:
         w = weather.wind
         print("\nДані про вітер:")
-        print(f"Напрям: {w.wind_direction.value}")
+        print(f"Напрям: {w.wind_direction}")
         print(f"Кут (градуси): {w.wind_degree}")
         print(f"Швидкість (км/год): {w.wind_kph}")
         print(f"Швидкість (миль/год): {w.wind_mph}")
